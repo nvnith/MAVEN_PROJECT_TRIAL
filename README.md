@@ -1,6 +1,6 @@
 # Calculator App
 
-A simple Java fapplication built using Maven for demonstrating Jenkins CI/CD concepts.
+A simple Java HI fapplication built using Maven for demonstrating Jenkins CI/CD concepts.
 
 ## Project Overview
 
