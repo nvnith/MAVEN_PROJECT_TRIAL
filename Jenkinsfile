@@ -23,10 +23,10 @@ pipeline {
             steps {
                 sh '''
                 mvn sonar:sonar \
-                -Dsonar.projectKey=YOUR_PROJECT_KEY \
+                -Dsonar.projectKey=SONAR_TOKER \
                 -Dsonar.organization=YOUR_ORG \
                 -Dsonar.host.url=https://sonarcloud.io \
-                -Dsonar.token=$SONAR_TOKEN
+                -Dsonar.token=$ebba4a9165e3c3759fe416582b28728dc1bf837b
                 '''
             }
         }
