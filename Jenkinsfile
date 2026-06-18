@@ -19,16 +19,17 @@ pipeline {
             }
         }
 
+        stage('Sonar Analysis') {
+            steps {
+                sh '''
+                mvn sonar:sonar \
+                -Dsonar.projectKey=YOUR_PROJECT_KEY \
+                -Dsonar.organization=YOUR_ORG \
+                -Dsonar.host.url=https://sonarcloud.io \
+                -Dsonar.token=$SONAR_TOKEN
+                '''
+            }
+        }
+
     }
-    stage('Sonar Analysis') {
-    steps {
-        sh '''
-        mvn sonar:sonar \
-        -Dsonar.projectKey=YOUR_PROJECT_KEY \
-        -Dsonar.organization=YOUR_ORG \
-        -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.token=$SONAR_TOKEN
-        '''
-    }
-}
 }
